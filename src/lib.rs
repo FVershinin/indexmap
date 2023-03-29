@@ -145,7 +145,7 @@ pub use crate::set::IndexSet;
 /// Hash value newtype. Not larger than usize, since anything larger
 /// isn't used for selecting position anyway.
 #[derive(Clone, Copy, Debug, PartialEq)]
-struct HashValue(usize);
+pub struct HashValue(usize);
 
 impl HashValue {
     #[inline(always)]
@@ -155,7 +155,7 @@ impl HashValue {
 }
 
 #[derive(Copy, Debug)]
-struct Bucket<K, V> {
+pub struct Bucket<K, V> {
     hash: HashValue,
     key: K,
     value: V,
