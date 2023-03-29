@@ -212,7 +212,7 @@ impl<K, V> Bucket<K, V> {
     }
 }
 
-trait Entries {
+pub trait Entries {
     type Entry;
     fn into_entries(self) -> Vec<Self::Entry>;
     fn as_entries(&self) -> &[Self::Entry];
